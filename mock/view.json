@@ -1,0 +1,25 @@
+{
+  "/app/app/view/loadNGViewList": {
+    "get": {
+      "delay": 3000,
+      "justStr":true,
+      "data": "1,2,3"
+    }
+  },
+  "/app/app/view/saveNGView": {
+    "post": {
+      "delay": 3000,
+      "justStr":true,
+      "data": "4"
+    }
+  },
+  "/app/app/view/getNGView": {
+    "get": {
+      "delay": 3000,
+      "params": {
+        "viewContent": "126"
+      },
+      "data": "@fromFile('./mock/data/viewData.json')"
+    }
+  }
+}

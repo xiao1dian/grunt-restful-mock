@@ -1,0 +1,256 @@
+{
+    "prefix": "",
+    "name": "Grid",
+    "columns": [
+        {
+            "encoded": true,
+            "template": "<input type='checkbox' ng-model='dataItem.selected' ng-click='onClick($event)'/>",
+            "title": "<input type='checkbox' title='Select all' ng-click='toggleSelectAll($event)' />",
+            "width": 25,
+            "headerAttributes": {
+                "id": "dc9f76cc-e9be-4bd9-abab-40b7e986afa6"
+            }
+        },
+        {
+            "encoded": true,
+            "field": "assetType",
+            "width": 225,
+            "title": "Asset Type",
+            "filterable": {
+                "cell": {
+                    "operator": "eq"
+                }
+            },
+            "template": "<span ng-bind='dataItem.assetType'>#: data.assetType#</span>",
+            "headerAttributes": {
+                "id": "a7ec6136-c653-4d02-8918-751b227a5e66"
+            }
+        },
+        {
+            "encoded": true,
+            "field": "model",
+            "width": 250,
+            "title": "Model",
+            "filterable": {
+                "cell": {
+                    "showOperators": false
+                }
+            },
+            "template": "<span ng-bind='dataItem.model'>#: data.model#</span>",
+            "headerAttributes": {
+                "id": "b67db5aa-ff31-4653-b530-5e51f95b0e84"
+            }
+        },
+        {
+            "encoded": true,
+            "field": "uniqueId",
+            "width": 255,
+            "title": "Unique Id",
+            "filterable": {
+                "cell": {
+                    "operator": "eq"
+                }
+            },
+            "template": "<span ng-bind='dataItem.uniqueId'>#: data.uniqueId#</span>",
+            "headerAttributes": {
+                "id": "98a52ad4-7b5b-4234-966c-01d456b1b44a"
+            }
+        },
+        {
+            "encoded": true,
+            "field": "serialNo",
+            "title": "Serial No",
+            "template": "<span ng-bind='dataItem.serialNo'>#: data.serialNo#</span>",
+            "headerAttributes": {
+                "id": "2ae0318e-a322-4026-9708-ef37fe6e147b"
+            }
+        }
+    ],
+    "toolbar": null,
+    "autoBind": true,
+    "filterable": {
+        "mode": "row"
+    },
+    "scrollable": true,
+    "sortable": true,
+    "selectable": true,
+    "allowCopy": false,
+    "navigatable": false,
+    "pageable": {
+        "refresh": true,
+        "pageSizes": true,
+        "buttonCount": 5
+    },
+    "editable": false,
+    "groupable": false,
+    "rowTemplate": "",
+    "altRowTemplate": "",
+    "noRecords": false,
+    "dataSource": {
+        "data": null,
+        "schema": {
+            "type": "json",
+            "total": "d.__count",
+            "model": {
+                "fields": {
+                    "assetType": {
+                        "type": "string"
+                    },
+                    "model": {
+                        "type": "string"
+                    },
+                    "uniqueId": {
+                        "type": "string"
+                    },
+                    "serialNo": {
+                        "type": "string"
+                    },
+                    "macAddress": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "offlineStorage": null,
+        "serverSorting": true,
+        "serverPaging": true,
+        "serverFiltering": true,
+        "serverGrouping": false,
+        "serverAggregates": false,
+        "batch": false,
+        "type": "odata",
+        "allowUnsort": true,
+        "transport": {
+            "read": {
+                "url": "app/asset/list"
+            },
+            "dataSource": null
+        },
+        "filter": {
+            "logic": "and",
+            "filters": [
+                {
+                    "field": "assetType",
+                    "operator": "eq",
+                    "value": "DSAM"
+                }
+            ]
+        },
+        "pageSize": 5,
+        "table": null,
+        "fields": [
+            {
+                "encoded": true,
+                "template": "<input type='checkbox' ng-model='dataItem.selected' ng-click='onClick($event)'/>",
+                "title": "<input type='checkbox' title='Select all' ng-click='toggleSelectAll($event)' />",
+                "width": 25,
+                "headerAttributes": {
+                    "id": "dc9f76cc-e9be-4bd9-abab-40b7e986afa6"
+                }
+            },
+            {
+                "encoded": true,
+                "field": "assetType",
+                "width": 225,
+                "title": "Asset Type",
+                "filterable": {
+                    "cell": {
+                        "operator": "eq"
+                    }
+                },
+                "template": "<span ng-bind='dataItem.assetType'>#: data.assetType#</span>",
+                "headerAttributes": {
+                    "id": "a7ec6136-c653-4d02-8918-751b227a5e66"
+                }
+            },
+            {
+                "encoded": true,
+                "field": "model",
+                "width": 250,
+                "title": "Model",
+                "filterable": {
+                    "cell": {
+                        "showOperators": false
+                    }
+                },
+                "template": "<span ng-bind='dataItem.model'>#: data.model#</span>",
+                "headerAttributes": {
+                    "id": "b67db5aa-ff31-4653-b530-5e51f95b0e84"
+                }
+            },
+            {
+                "encoded": true,
+                "field": "uniqueId",
+                "width": 255,
+                "title": "Unique Id",
+                "filterable": {
+                    "cell": {
+                        "operator": "eq"
+                    }
+                },
+                "template": "<span ng-bind='dataItem.uniqueId'>#: data.uniqueId#</span>",
+                "headerAttributes": {
+                    "id": "98a52ad4-7b5b-4234-966c-01d456b1b44a"
+                }
+            },
+            {
+                "encoded": true,
+                "field": "serialNo",
+                "title": "Serial No",
+                "template": "<span ng-bind='dataItem.serialNo'>#: data.serialNo#</span>",
+                "headerAttributes": {
+                    "id": "2ae0318e-a322-4026-9708-ef37fe6e147b"
+                }
+            }
+        ],
+        "select": null,
+        "page": 1,
+        "group": []
+    },
+    "height": null,
+    "resizable": true,
+    "reorderable": true,
+    "columnMenu": true,
+    "detailTemplate": null,
+    "columnResizeHandleWidth": 3,
+    "mobile": "",
+    "messages": {
+        "editable": {
+            "cancelDelete": "Cancel",
+            "confirmation": "Are you sure you want to delete this record?",
+            "confirmDelete": "Delete"
+        },
+        "commands": {
+            "create": "Add new record",
+            "cancel": "Cancel changes",
+            "save": "Save changes",
+            "destroy": "Delete",
+            "edit": "Edit",
+            "update": "Update",
+            "canceledit": "Cancel",
+            "excel": "Export to Excel",
+            "pdf": "Export to PDF"
+        },
+        "noRecords": "No records available."
+    },
+    "excel": {
+        "proxyURL": "",
+        "allPages": false,
+        "filterable": false,
+        "fileName": "Export.xlsx"
+    },
+    "pdf": {
+        "fileName": "Export.pdf",
+        "proxyURL": "",
+        "paperSize": "auto",
+        "allPages": false,
+        "landscape": false,
+        "margin": null,
+        "title": null,
+        "author": null,
+        "subject": null,
+        "keywords": null,
+        "creator": "Kendo UI PDF Generator",
+        "date": null
+    }
+}

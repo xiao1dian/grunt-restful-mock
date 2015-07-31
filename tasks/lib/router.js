@@ -188,6 +188,8 @@ function handle(req, res, options) {
     handleJSONP(req, res, options);
   } if (options.odata) {
     handleOdata(req, res, options);
+  } if (options.justStr) {
+    handleString(req, res, options);
   } else {
     handleJSON(req, res, options);
   }
@@ -196,7 +198,7 @@ function handle(req, res, options) {
 function handleOdata(req, res, options) {
   // 生成 mock data
   res.body = generateJSON(options.data, req.params, options);
-  var body = res.body.jqueryCallBack + '(' + JSON.stringify(res.body.data) + ')'
+  var body = res.body.jqueryCallBack + '(' + JSON.stringify(res.body.data) + ')';
 
   var headers = {
     /*
@@ -214,19 +216,33 @@ function handleOdata(req, res, options) {
   res.end(body);
 }
 
+function handleString(req, res, options) {
+  // 生成 mock data
+  res.body = generateJSON(options.data, req.params, options);
+  var body = res.body;
+
+  var headers = {
+    /*
+     * 支持跨域请求
+     */
+    'Access-Control-Allow-Credentials': true,
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'X-Requested-With, accept, origin, content-type',
+    'Access-Control-Allow-Methods': 'PUT,GET,POST,DELETE,OPTIONS',
+
+    'Content-Type': 'application/json',
+    'Content-Length': Buffer.byteLength(body)
+  };
+
+
+  res.writeHead(options.statusCode, headers);
+  res.end(body);
+}
+
 function handleJSON(req, res, options) {
   // 生成 mock data
   res.body = generateJSON(options.data, req.params, options);
-  var body;
-  //var body = JSON.stringify(res.body);
-  //var body = res.body.jqueryID + '(' + JSON.stringify(res.body.data) + ')'
-  //var body = JSON.stringify(res.body.data);
-  //body = res.body;
-  if ('object' === typeof options.data) {
-    var body = JSON.stringify(res.body)
-  } else {
-    body = res.body;
-  }
+  var body = JSON.stringify(res.body);
 
   var headers = {
     /*

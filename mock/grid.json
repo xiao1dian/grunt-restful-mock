@@ -1,0 +1,24 @@
+{
+    "/app/app/asset/list": {
+        "get": {
+            "delay": 3000,
+            "odata":"KendoGrid",
+            "data" :{
+                "jqueryCallBack": "@formItem('$callback')" ,
+                "data": {
+                    "callback":"@formItem('$callback')",
+                    "d" : {
+                        "results": [
+                            {
+                                "_id": 554,
+                                "assetType": "DSAM"
+                            }
+                        ],
+                        "__count": 1
+                    }
+                }
+            }
+
+        }
+    }
+}
