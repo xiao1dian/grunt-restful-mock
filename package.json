@@ -1,16 +1,16 @@
 {
-  "name": "grunt-restful-mock",
+  "name": "grunt-restful-mock-mayiuu",
   "description": "Mock json data.",
   "version": "0.1.21",
-  "homepage": "https://github.com/bubkoo/grunt-restful-mock",
+  "homepage": "https://github.com/xiao1dian/grunt-restful-mock-mayiuu",
   "author": {
-    "name": "bubkoo",
-    "email": "bubkoo@163.com",
+    "name": "xiao1dian",
+    "email": "xiao1dian@163.com",
     "url": "http://bubkoo.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bubkoo/grunt-restful-mock.git"
+    "url": "https://github.com/xiao1dian/grunt-restful-mock-mayiuu.git"
   },
   "bugs": {
     "url": "https://github.com/bubkoo/grunt-restful-mock/issues"
